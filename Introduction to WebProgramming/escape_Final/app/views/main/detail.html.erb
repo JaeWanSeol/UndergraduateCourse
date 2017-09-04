@@ -1,0 +1,94 @@
+<%= stylesheet_link_tag "stylesheets/detail.css" %>
+
+<div class="frame">
+	<div class="up_bar">
+		<div id="up_bar_black">
+		</div>
+		<div id="up_bar_title">TheEscaper<span style="color:#e5c014">s</span>
+		</div>
+		<div>
+			<%= image_tag 'mainImg.jpg', :id => "upper"%>
+
+			<div id="menu_unselected">
+				<%= link_to "신고", new_report_path %>
+			</div>
+			<div id="menu_selected">
+				<%= link_to "검색", main_search_path %>
+			</div>
+			<div id="up_bar_whiteline">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="wrapper">
+		<div style="height:100px;background-color:">
+		</div>
+		<div class="detail_frame">
+
+			<div id="detail_page_images">
+				<div id="cafeImage">
+					<%= image_tag @detailRoom.cafeimgurl %>
+				</div>
+				<div id = "roomImage">
+					<%= image_tag @detailRoom.roomimgurl %>
+				</div>
+			</div>
+
+			<div id="room_info">
+
+				<div id = "rating_section">
+					<h2> 평점 : <span style="color: green"><%= @detailRoom.rating %></span>/ 5</h2>
+				</div>
+				<h2> <%= @detailRoom.region %> <%= @detailRoom.cafename%> </h3>
+				<h1> :<%= @detailRoom.roomname %></h3>
+				<h3> <%= @detailRoom.addr %> </h4>
+				<!-- <h5>테마: 추리, 미스테리, 판타지</br> -->
+				<h3> 난이도: <span style="color: red"><%= @detailRoom.level %></span>/5 </br>
+				<h3> <%= @detailRoom.etc %> </h4>
+
+
+			</div>
+
+
+			<div id="map">
+				<p> <%= raw @detailRoom.maphtml %> </p>
+			</div>
+
+			<div id = "show_comment">
+				<h1> Comments </h1>
+				<% @replies.each do |r| %>
+				<div class="comment_usr"> <p> <%= r.usr %> </p> </div>
+				<div class="comment_content"><p> <%= r.comment %> </p> </div>
+				<div class="comment_rating"><p> <%= r.rating %> </p> </div>
+				<% end %>
+			</div>
+			<hr/>
+			<br>
+			<br>
+			<div id = "write_comment">
+				<%= form_for "reply", url: main_comments_path do |f| %>
+				<div id = "usr_input">
+					<%= f.label "ID" %><br>
+					<%= f.text_field :usr %>
+				</div>
+				<div id="comment_input">
+					<%= f.label "REVIEW" %><br>
+					<%= f.text_field :comment %>
+				</div>
+				<div id="rating_input">
+						<%= f.label "RATING (5점 만점)" %><br>
+						<%= f.text_field :rating %>
+				</div>
+				<%= hidden_field_tag(:room_id, @detailRoom.id) %>
+				<%= hidden_field_tag(:id, @detailRoom.id) %>
+				<div id = "submitButton">
+				<p>
+				<%= f.submit %>
+				</p>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

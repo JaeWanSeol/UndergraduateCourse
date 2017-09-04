@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @room.region %>
+</p>
+
+<p>
+  <strong>Cafename:</strong>
+  <%= @room.cafename %>
+</p>
+
+<p>
+  <strong>Roomname:</strong>
+  <%= @room.roomname %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @room.capacity %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @room.theme %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @room.level %>
+</p>
+
+<p>
+  <strong>Cafeimgurl:</strong>
+  <%= @room.cafeimgurl %>
+</p>
+
+<p>
+  <strong>Roomimgurl:</strong>
+  <%= @room.roomimgurl %>
+</p>
+
+<p>
+  <strong>Addr:</strong>
+  <%= @room.addr %>
+</p>
+
+<p>
+  <strong>Etc:</strong>
+  <%= @room.etc %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

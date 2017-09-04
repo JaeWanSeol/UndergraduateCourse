@@ -1,0 +1,519 @@
+﻿@font-face { font-family: 'NanumGothic'; src: url(NanumFont_TTF_ALL/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Iropke';
+	src: url('/assets/IropkeBatangM.eot') format('eot');
+	src: url('/assets/IropkeBatangM.woff') format('woff');
+}
+
+.frame {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+.up_bar {
+	width: 100%;
+	height: 30%;
+}
+#cave {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+}
+
+.main_title {
+	position: relative;
+	width: 100%;
+	height: 75%;
+}
+#search_white {
+	background-color: #d4dade;
+	width: 100%;
+	height: 38%;
+	font-family: Iropke;
+
+	position: absolute;
+	margin-top: 21%;
+}
+
+#roomcard_section {
+	background-color: #f4f5f8
+	width: 100%;
+	height: 30%;
+	margin-top: 51%;
+}
+
+
+#black_main {
+	background-color: black;
+	opacity: 0.6;
+	width: 100%;
+	height: 10%;
+	height: 25%;
+	position: absolute;
+	}
+
+#title_main {
+	color: white;
+	font-size: 36px;
+	position: absolute;
+	margin-top: 5.8%;
+	margin-left: 12%;
+	}
+
+#search_main {
+	color: white;
+	font-size: 17px;
+	position: relative;
+	margin-top: 7%;
+	margin-right: 1.5%;
+	float: right;
+	}
+
+#report_main {
+	color: white;
+	font-size: 17px;
+	position: relative;
+	margin-top: 7%;
+	margin-right: 15%;
+	float: right;
+	}
+#report_main:hover {
+	color : yellow;
+	}
+#search_main:hover {
+	color: yellow;
+	}
+/*여기부터 필터검색화면
+*/
+
+
+
+#up_bar_black {
+	width: 100%;
+	position: absolute;
+	height: 150px;
+	background-color: black;
+	margin-top: 0%;
+	}
+#up_bar_title {
+	color: white;
+	font-size: 36px;
+	position: absolute;
+	margin-left: 42%;
+	margin-top: 4%;
+	font-weight: bold;
+	}
+#upper {
+	margin-top: 9%;
+	width: 100%;
+	height: 70%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	/*box-shadow: rbga(0, 0, 0, 0.5) 0 0 0 9999px;
+	z-index: 100;*/
+
+}
+#menu_unselected {
+	color: white;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 7%;
+	font-size: 22px;
+	font-weight: bold;
+}
+#menu_unselected:hover {
+	color: yellow;
+}
+#info2 {
+		color: white;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 2%;
+	font-size: 22px;
+	font-weight: bold;
+}
+#menu_selected {
+		color: #e5c014;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 2%;
+	font-size: 22px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#up_bar_whiteline {
+	background-color: white;
+	position: absolute;
+	margin-top: 12.5%;
+	width: 95%;
+	height: 3px;
+	margin-left: 2.5%;
+	opacity: 0.7;
+
+}
+
+#search5 {
+	color: #30394e;
+	position: relative;
+	margin-top: 50px;
+	margin-left: 47%;
+	font-size: 30px;
+	text-decoration: underline;
+	font-weight: bold;
+	}
+#tag1 {
+	color: #30394e;
+	position: relative;
+	margin-top: 30px;
+	margin-left: 30%;
+	font-size: 20px;
+	font-weight: bold;
+}
+/*  added tag part */
+
+#tag1 > label {
+	display: inline-block;
+}
+#tag2 > label {
+	display: inline-block;
+}
+
+/* added ends */
+#tag2 {
+	color: #30394e;
+	position: relative;
+	margin-top: 30px;
+	margin-left: 30%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#tag1_selected {
+	display: inline;
+	color: #30394e;
+	background-color: white;
+	font-size: 20px;
+	position: relative;
+	margin-left: 10px;
+
+
+	border-radius: 0.7;
+	border: 4px solid #30394e;
+	border-radius: 7px;
+	padding: 2px 6px 2px 12px;
+	font-weight: bold;
+	text-align: center;
+
+	}
+#tag1_unselected {
+	display: inline;
+	color: white;
+	background-color: #30394e;
+	font-size: 20px;
+	position: relative;
+	margin-left: 10px;
+
+
+	border-radius: 0.7;
+	border: 4px solid #30394e;
+	border-radius: 7px;
+	padding: 2px 6px 2px 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#tag2_unselected {
+	display: inline;
+	color: white;
+	background-color: #30394e;
+	font-size: 20px;
+	position: relative;
+	margin-left: 10px;
+
+	border-radius: 0.7;
+	border: 4px solid #30394e;
+	border-radius: 7px;
+	padding: 2px 4px 2px 7px;
+	font-weight: bold;
+	text-align: center;
+
+	}
+#tag2_selected {
+	display: inline;
+	color: #30394e;
+	background-color: white;
+	font-size: 20px;
+	position: relative;
+	margin-left: 10px;
+
+	border-radius: 0.7;
+	border: 4px solid #30394e;
+	border-radius: 7px;
+	padding: 2px 7px 2px 7px;
+	font-weight: bold;
+	text-align: center;
+	}
+
+	/*added roomcards section */
+	.resultCard {
+		padding-left : 30%;
+		padding-right : 30%;
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	.resultCard > .resultCard_img {
+		display: inline-block;
+	}
+	.resultCard_img  img {
+		width: 200px;
+		height: 240px;
+	}
+
+	.resultCard_info {
+		display: inline-block;
+		margin-left: 5%;
+	}
+
+
+	/*roomcards ends*/
+	/*여기까지 필터검색화면
+*/
+
+
+
+	/*여기부터 지점신고화면
+*/
+	.new_report_frame{
+		background-color: #efefef;
+		width: 100%;
+		position: absolute;
+		margin-top: 550px;
+		text-align: center;
+	}
+	#i_report{
+		margin-bottom: 80px;
+		margin-top: 60px;
+		text-decoration: underline;
+		font-size: 30px;
+	}
+	#new_report_form{
+		font-size: 16px;
+		text-align: left;
+		padding-left: 35%;
+		margin-bottom: 20%;
+	}
+
+	#form_box_title{
+		width: 35%;
+		height: 20px;
+	}
+	#form_box_email{
+		width: 35%;
+		height: 20px;
+	}
+	#form_box_content{
+		width: 50%;
+		height: 120px;
+	}
+	.report_list{
+		margin-left: 18%;
+		margin-right: 16%;
+		margin-top: 200px;
+	}
+	#report_table{
+		margin-top: 60px;
+		text-align: center;
+		margin-bottom: 10%;
+	}
+	.report_th{
+		border-bottom: 2px solid gray;
+	}
+	#list_title{
+		width: 15%;
+		background-color:#d4dade;
+	}
+	#list_email{
+		width: 15%;
+		background-color: #eeeeee;
+	}
+	#list_content{
+		width: 40%;
+		height: 30px;
+		background-color:#d4dade;
+	}
+	#back_to_report{
+		text-align: right;
+	}
+	#report4 {
+		color: #e5c014;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 7%;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+	#show_report{
+		position: relative;
+		top: 150px;
+		width: 64%;
+		height: 80%;
+		padding-left: 18%;
+		padding-right: 18%;
+		padding-top: 50px;
+		background-color: #efefef;
+	}
+	#show_report p{
+		font-size: 15px;
+	}
+	#show_report div{
+		text-align: center;
+		margin-left: 80%;
+		width: 55px;
+		height: 20px;
+		font-size: 15px;
+		background-color:#e5c014;
+		border-radius: 10px 10px 10px 10px;
+	}
+	#edit_report{
+		width: 80%;
+		position: relative;
+		height: 80%;
+		top: 150px;
+		padding-top: 30px;
+		padding-left: 20%;
+		background-color: #efefef;
+	}
+	#edit_report div{
+		text-align: left;
+	}
+	#edit_button{
+		font-size: 15px;
+		margin-left: 43%;
+	}
+
+#info4 {
+		color: white;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 2%;
+	font-size: 22px;
+	font-weight: bold;
+}
+#search4 {
+		color: white;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 2%;
+	font-size: 22px;
+
+	font-weight: bold;
+}
+		/*여기까지 지점신고화면
+*/
+
+#roomcard_section {
+	position: relative;
+
+}
+
+.roomcard{
+  position: relative;
+  left: 15%;
+  width: 30%;
+  min-height: 400px;
+  height: 360px;
+  margin: 30px 30px;
+  display: inline-block;
+
+  text-align: left;
+  padding: 0;
+}
+.roomcard img{
+  margin: 0 auto;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.roomcard h1{
+  font-size: 72px;
+  line-height: 20px;
+  text-align: left;
+
+}
+.roomcard h2{
+  font-size: 16px;
+}
+
+.rating{
+  float: right;
+  margin-right: 10px;
+}
+
+.report_frame {
+	background-color: white;
+	position: absolute;
+	margin-top: 37.5%;
+	align-content : center;
+	display: inline-block;
+	width: 100%;
+	height: 60%;
+}
+.detail_frame {
+	display: block;
+	margin-top: 25%;
+
+}
+#upper2 {
+	margin-top: 9%;
+	width: 100%;
+	height: 15%;
+
+	display:inline;
+	background-color: rgba(0, 0, 0, 0.7);
+	/*box-shadow: rbga(0, 0, 0, 0.5) 0 0 0 9999px;
+	z-index: 100;*/
+
+}
+.up_bar1 {
+	width: 100%;
+	height: 30%;
+}
+#menu_unselected1 {
+	color: #e5c014;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 7%;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#menu_selected1:hover {
+	color: yellow;
+}
+
+#menu_selected1 {
+	color: white;
+	position: relative;
+	float: right;
+	margin-top: 10%;
+	margin-right: 2%;
+	font-size: 22px;
+
+	font-weight: bold;
+}

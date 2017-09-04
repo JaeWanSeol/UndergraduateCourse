@@ -1,0 +1,72 @@
+<%= form_for(room) do |f| %>
+  <% if room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+      <ul>
+      <% room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :region %>
+    <%= f.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cafename %>
+    <%= f.text_field :cafename %>
+  </div>
+
+  <div class="field">
+    <%= f.label :roomname %>
+    <%= f.text_field :roomname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :capacity %>
+    <%= f.text_field :capacity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :theme %>
+    <%= f.text_field :theme %>
+  </div>
+
+  <div class="field">
+    <%= f.label :level %>
+    <%= f.text_field :level %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cafeimgurl %>
+    <%= f.text_field :cafeimgurl %>
+  </div>
+
+  <div class="field">
+    <%= f.label :roomimgurl %>
+    <%= f.text_field :roomimgurl %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr %>
+    <%= f.text_field :addr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :etc %>
+    <%= f.text_field :etc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :maphtml %>
+    <%= text_field :maphtml %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

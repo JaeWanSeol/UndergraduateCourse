@@ -1,0 +1,15 @@
+<h1>Report Lists. Please do something.</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+	<% @report.each do |report| %>
+		<tr>
+			<td><%= report.title %></td>
+			<td><%= report.email %></td>
+			<td><%= report.content %></td>
+		</tr>
+	<% end %>
+</table>

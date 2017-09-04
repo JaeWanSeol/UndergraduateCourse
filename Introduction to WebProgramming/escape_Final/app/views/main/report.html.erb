@@ -1,0 +1,53 @@
+<%= stylesheet_link_tag "stylesheet" %>
+
+<div class="frame">
+	<div class="up_bar">
+		<div id="up_bar_black">
+		</div>
+		<div id="up_bar_title">TheEscaper<span style="color:#e5c014">s</span>
+		</div>
+		<div>
+			<%= image_tag 'mainImg.jpg', :id => "upper"%>		
+			<div id="menu_unselected1">
+				<%= link_to "신고", new_report_path %>
+			</div>
+			<div id="menu_selected1">
+				<%= link_to "검색", main_search_path %>
+			</div>
+			<div id="up_bar_whiteline">
+			</div>
+		</div>
+	</div>
+
+	<div class="report_frame">
+		<form class="form-horizontal">
+			<div class="form-group" style="margin-left: 25%">
+				<label class="control-label col-sm-2" for="msg">신고유형</label>
+				<label class="radio-inline" style="margin-left: 15px"><input type="radio" name="optradio1">개점</label>
+				<label class="radio-inline"><input type="radio" name="optradio2">폐점</label>
+				<label class="radio-inline"><input type="radio" name="optradio3">기타</label>
+			</div>
+			<%= form_for @report do |f| %>
+			  <p>
+			    <%= f.label :제목 %><br>
+			    <%= f.text_field :title %>
+			  </p>
+
+			  <p>
+			    <%= f.label :이메일주소 %><br>
+			    <%= f.text_area :email %>
+			  </p>
+			 <p>
+			    <%= f.label :내용 %><br>
+			    <%= f.text_area :content %>
+			  </p>
+			  <p>
+			    <%= f.submit "제출" %>
+			  </p>
+			<% end %>
+
+	    </form>
+	</div>
+
+
+</div>

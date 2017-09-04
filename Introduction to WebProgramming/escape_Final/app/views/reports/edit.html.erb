@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "stylesheet" %>
+
+<div class="frame">
+		<div id="up_bar_black">
+		</div>
+		<div id="up_bar_title">TheEscaper<span style="color:#e5c014">s</span>
+		</div>
+
+<div id="edit_report">
+	<p><h1>글 수정</h1></p>
+
+	<div><%= render 'form', report: @report %></div>
+
+	<div id="edit_button"><%= link_to 'Show', @report %> |
+	<%= link_to 'Back', reports_path %></div>
+</div>
+</div>

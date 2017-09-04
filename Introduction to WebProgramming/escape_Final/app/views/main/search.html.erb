@@ -1,0 +1,109 @@
+<%= stylesheet_link_tag "stylesheet" %>
+<div class="frame">
+	<div class="up_bar">
+		<div id="up_bar_black">
+		</div>
+		<div id="up_bar_title">TheEscaper<span style="color:#e5c014">s</span>
+		</div>
+		<div>
+			<%= image_tag 'mainImg.jpg', :id => "upper"%>
+
+			<div id="menu_unselected">
+				<%= link_to "신고", new_report_path %>
+			</div>
+			<div id="menu_selected">
+				<%= link_to "검색", main_search_path %>
+			</div>
+			<div id="up_bar_whiteline">
+			</div>
+		</div>
+	</div>
+
+	<div id="search_white">
+		<div id="search5">검색
+		</div>
+	</br>
+		<%= form_for "box", url: main_search_path do |f| %>
+		<div id="tag1">지역 &nbsp; &nbsp; &nbsp;
+
+				<label> 홍대 </label>
+				<input type="checkbox" name="box[1]" value="홍대">
+				<label> 강남 </label>
+				<input type="checkbox" name="box[2]" value="강남">
+				<label> 신촌 </label>
+				<input type="checkbox" name="box[3]" value="신촌">
+				<label> 이태원 </label>
+				<input type="checkbox" name="box[4]" value="이태원">
+				<label> 대학로 </label>
+				<input type="checkbox" name="box[5]" value="대학로">
+				<label> 신림 </label>
+				<input type="checkbox" name="box[6]" value="신림">
+				<label> 기타 </label>
+				<input type="checkbox" name="box[7]" value="기타">
+
+		</div>
+		<div id="tag1">테마 &nbsp; &nbsp; &nbsp;
+
+				<label> 공포 </label>
+				<input type="checkbox" name="box[8]" value="공포">
+				<label> 추리 </label>
+				<input type="checkbox" name="box[9]" value="추리">
+				<label> 판타지 </label>
+				<input type="checkbox" name="box[10]" value="판타지">
+
+
+		</div>
+		<div id="tag2">난이도 &nbsp; &nbsp;
+
+				<label> 1 </label>
+				<input type="checkbox" name="box[11]" value="1">
+				<label> 2 </label>
+				<input type="checkbox" name="box[12]" value="2">
+				<label> 3 </label>
+				<input type="checkbox" name="box[13]" value="3">
+				<label> 4 </label>
+				<input type="checkbox" name="box[14]" value="4">
+				<label> 5 </label>
+				<input type="checkbox" name="box[15]" value="5">
+				<%= f.submit "나와라" %>
+			<% end %>
+		</div>
+	</div>
+
+	<div id="roomcard_section">
+		<% if(@resultroom.length != 0)%>
+			<% @resultroom.each do |r| %>
+				<div class = "resultCard">
+					<div class = "resultCard_img">
+						<%= link_to main_detail_path(:id => r.id) do %>
+							<%= image_tag r.roomimgurl %>
+						<% end %>
+					</div>
+					<div class = "resultCard_info">
+						<h2> <%= r.region %> <%= r.cafename %> </h2>
+						<h1> :<%= r.roomname %> </h2>
+						<h3> #<%= r.region %> #<%= r.theme %> </h3>
+						<h2> 난이도 <span style="color: red"><%= r.level %></span> / 5</h2>
+						<h2> 평점   <span style="color: green"><%= r.rating %></span> / 5</h2>
+					</div>
+				</div>
+			<% end %>
+
+		<% end %>
+
+		<% if false %>
+			<% list.each do |i| %>
+				<div class="roomcard">
+					<img src="./img/cafe_esc.jpg"/>
+						<h1>ESC 신림본점</br>
+						<span style:"font-size: 18px">: <살인자의 방></span>
+						</h1>
+						<h2>참가인원: 2-4인</h2>
+						<div class="rating">
+							<h1>평점: <span style="color:#008445">4.1</span>/5</h1>
+						</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>

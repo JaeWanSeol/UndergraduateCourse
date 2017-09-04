@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag "stylesheet" %>
+
+<div class="frame">
+		<div id="up_bar_black">
+		</div>
+		<div id="up_bar_title">TheEscaper<span style="color:#e5c014">s</span>
+		</div>
+
+	<div id=show_report>
+		<p id="notice"><%= notice %></p>
+
+		<p>
+			<strong>제목:</strong>
+			<%= @report.title %>
+		</p>
+
+		<p>
+  		  <strong>Email:</strong>
+ 		 <%= @report.email %>
+	 	</p>
+
+		<p>
+			<strong>내용:</strong>
+			<%= @report.content %>
+		</p>
+		<div><%= link_to 'Back', new_report_path %></div>
+	</div>
+
+</div>

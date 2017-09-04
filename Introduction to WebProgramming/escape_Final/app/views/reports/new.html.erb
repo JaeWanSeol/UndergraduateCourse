@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag "stylesheet" %>
+<div class="frame">
+		<div id="up_bar_black">
+		</div>
+		<div id="up_bar_title">TheEscaper<span style="color:#e5c014">s</span>
+		</div>
+		<div>
+			<%= image_tag 'mainImg.jpg', :id => "upper"%>
+		</div>
+		<div id="menu_unselected">
+			<%= link_to "신고", new_report_path %>
+		</div>
+		<div id="menu_selected">
+			<%= link_to "검색", main_search_path %>
+		</div>
+		<div id="up_bar_whiteline">
+		</div>
+		
+ <div class="new_report_frame">
+	 	<h1 id="i_report">매장 신고</h1>
+		<div id="new_report_form"><%= render 'form', report: @report %></div>
+ </div>
+</div>
+
+
+

@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "stylesheet" %>
+<div class="frame">
+	<!-- <img src="app/assets/images/mainimg.jpeg" width="400" height="400"/> -->
+    <%= image_tag 'mainImg.jpg', :id => "cave"%>
+
+
+
+	<div class="main_title">
+		<div id="black_main">
+		</div>
+		<div id="title_main">TheEscaper<span style="color:#e5c014">s</span>
+		</div>
+		<div id="report_main">
+			<%= link_to "신고", new_report_path %>
+		</div>
+		<div id="search_main">
+			<%= link_to "검색", main_search_path %>
+		</div>
+	</div>
+</div>
