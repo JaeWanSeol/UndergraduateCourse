@@ -1,0 +1,2 @@
+javac hairpin_2012_11249.java
+java hairpin_2012_11249 DNAseq.fasta
